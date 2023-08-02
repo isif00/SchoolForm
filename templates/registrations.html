@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Registration Form</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="input-box">
+        {{form }}
+        <div class="input-box button">
+          <input type="Submit" value="Register Now">
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
